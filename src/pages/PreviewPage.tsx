@@ -118,8 +118,7 @@ const PreviewPage: React.FC = () => {
             
             <div 
               ref={targetRef as React.RefObject<HTMLDivElement>} 
-              className="bg-white border border-gray-300 p-4 mb-6"
-            >
+              className="bg-white border border-black p-8 mb-6 print:m-8 print:border print:border-black print:rounded">
               <CertificateTemplate formData={formData} />
             </div>
           </div>
