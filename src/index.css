@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .form-input {
+    @apply w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+  
+  .form-group {
+    @apply mb-4;
+  }
+  
+  .form-section {
+    @apply border border-gray-200 rounded-lg p-4 mb-6 bg-white shadow-sm;
+  }
+  
+  .form-section-title {
+    @apply text-lg font-medium text-gray-900 mb-4 pb-2 border-b border-gray-200;
+  }
+
+  .certificate-border {
+    @apply border-2 border-black p-6;
+  }
+  
+  .certificate-title {
+    @apply text-xl font-bold text-center mb-4;
+  }
+  
+  .certificate-table {
+    @apply w-full border-collapse;
+  }
+  
+  .certificate-table td {
+    @apply p-1 text-sm;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-md text-white font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 focus:ring-blue-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-600 hover:bg-gray-700 focus:ring-gray-500;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .certificate-template {
+    width: 100% !important;
+    height: 100% !important;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+.react-datepicker-wrapper{
+  width: 100%;
+}
